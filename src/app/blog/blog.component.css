@@ -1,0 +1,35 @@
+.blogdiv{
+    display:block;
+    max-width: 800px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.blogdiv h3{
+    font-size: 24px;
+    color: darkblue;
+}
+.date{
+    font-size:15px;
+    color: grey;
+    float:right;
+    font-style: italic;
+}
+.date::after{
+    claer: both;
+    content: '';
+}
+.img{
+    display: block;
+    width: 600px;
+    height: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.desc{
+    margin-bottom: 20px;
+}
+.content{
+    display:block;
+    max-width: 800px;
+    float: left;
+}

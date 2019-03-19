@@ -1,0 +1,9 @@
+<div class="content">
+  <div *ngFor="let b of blog.result" class="blogdiv">
+    <h3>{{b.title.az}}</h3>
+    <span class="date">{{b.date}}</span>
+    <img class="img" src="{{b.image}}">
+    <p class="desc">{{b.text}}</p>
+    <hr>
+  </div>
+</div>

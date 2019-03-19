@@ -1,0 +1,6 @@
+<div class="sidebar">
+  <h3 translate>Weather</h3>
+  {{response.weather[0].main}}({{response.weather[0].description}})
+  <img src="http://openweathermap.org/img/w/{{response.weather[0].icon}}.png"/>
+  {{response.main.temp}} &#8451;
+</div>

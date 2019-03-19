@@ -1,0 +1,27 @@
+
+.main-menu{
+    padding: 15px;
+    background-color: black;
+}
+a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+ul{
+    display:inline-block;
+}
+li{
+    float: left;
+    margin-left: 20px;
+}
+.lang{
+    float: right;
+    margin: 5px;
+}
+button{
+    color: #ffffff;
+    background-color: transparent;
+    border: 0;
+}

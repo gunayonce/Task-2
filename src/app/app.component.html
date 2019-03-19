@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="main-menu">
+  <ul>
+    <li>
+      <a target="_blank" rel="noopener" href="#" translate>Title</a>
+    </li>
+    <li>
+      <a target="_blank" rel="noopener" href="#" translate>About</a>
+    </li>
+  </ul>
+
+
+  <ul class="lang">
+    <li>
+      <button (click)="switchLanguage('en')">en</button>
+    </li>
+    <li>
+      <button (click)="switchLanguage('ru')">ru</button>
+    </li>
+    <li>
+      <button (click)="switchLanguage('az')">az</button>
+    </li>
+  </ul>
+
+
+</div>
+<app-blog></app-blog>
+<app-sidebar></app-sidebar>
+<router-outlet></router-outlet>
