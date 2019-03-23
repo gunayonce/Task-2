@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {Routes, RouterModule} from '@angular/router';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlogComponent } from './blog/blog.component';
@@ -10,13 +12,20 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import {WeatherService} from './weather.service';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { BlogDetailsComponent } from './blog-details/blog-details.component';
 
+const appRoutes: Routes = [
+    {path: '', component: BlogComponent},
+    {path: 'blog-details/:id', component: BlogDetailsComponent},
+    {path: 'blog', component: BlogComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogComponent,
-    SidebarComponent
+    SidebarComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +37,8 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
             useFactory: HttpLoaderFactory,
             deps: [HttpClient]
         }
-    })
+    }),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [BlogService,WeatherService],
   bootstrap: [AppComponent]

@@ -1,9 +1,10 @@
 <div class="content">
-  <div *ngFor="let b of blog.result" class="blogdiv">
+  <div *ngFor="let b of blog.result; let i = index " class="blogdiv">
     <h3>{{b.title.az}}</h3>
     <span class="date">{{b.date}}</span>
     <img class="img" src="{{b.image}}">
-    <p class="desc">{{b.text}}</p>
+    <p class="desc">{{b.text.slice(0,200)}}...</p>
+    <a routerLink="blog-details/{{i}}" translate>More</a>
     <hr>
   </div>
 </div>
